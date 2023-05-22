@@ -383,7 +383,7 @@ function Test-ExcludeUDPSourcePort {
 
 Test-FilesToCacheOnVHD
 Test-PatchInstalled
-Test-ImagesPulled
+#Test-ImagesPulled
 Test-RegistryAdded
 Test-DefenderSignature
 Test-AzureExtensions

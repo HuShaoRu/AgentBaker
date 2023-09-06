@@ -111,8 +111,7 @@ $wuRegistryNames = @(
     "4289201804",
     "1355135117",
     "RemoveSourcePortPreservationForRest",
-    "2214038156",
-    "DeltaHivePolicy"
+    "2214038156"
 )
 
 foreach ($key in $wuRegistryKeys) {

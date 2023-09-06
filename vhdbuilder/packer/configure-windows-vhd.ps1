@@ -601,12 +601,6 @@ function Update-Registry {
             Write-Log "Creating HKLM:\SYSTEM\CurrentControlSet\Control\Windows Containers"
             New-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Windows Containers"
         }
-
-        $currentValue=(Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Windows Containers" -Name DeltaHivePolicy -ErrorAction Ignore)
-        if (![string]::IsNullOrEmpty($currentValue)) {
-            Write-Log "The current value of DeltaHivePolicy is $currentValue"
-        }
-        Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Windows Containers" -Name DeltaHivePolicy -Value 2 -Type DWORD
     }
 }
 

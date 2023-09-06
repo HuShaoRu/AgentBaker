@@ -370,12 +370,6 @@ function Test-RegistryAdded {
             Write-ErrorWithTimestamp "The registry for 2214038156 is not added"
             exit 1
         }
-
-        $result=(Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Windows Containers" -Name DeltaHivePolicy)
-        if ($result.DeltaHivePolicy -ne 2) {
-            Write-ErrorWithTimestamp "The registry for DeltaHivePolicy is not added"
-            exit 1
-        }
     }
 }
 
